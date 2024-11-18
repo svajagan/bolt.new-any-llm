@@ -265,9 +265,10 @@ export const ChatImpl = memo(({ initialMessages, storeMessageHistory }: ChatProp
       enhancePrompt={() => {
         enhancePrompt(
           input,
-          (input) => {
-            setInput(input);
-            scrollTextArea();
+  setInput,
+  model,
+  provider?.name || DEFAULT_PROVIDER.name,
+  userApiKeys
           },
           model,
           provider,
